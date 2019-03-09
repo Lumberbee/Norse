@@ -9,6 +9,10 @@ It builds the following ROMs:
 
 To set up the repository, see [INSTALL.md](INSTALL.md).
 
+## Current changes from base ROM
+
+- TMs can be taught without being consumed (pokecrystal disassembly [reusable TM tutorial][reusable TM tutorial])
+
 ## See also
 
 - [**FAQ**](FAQ.md)
@@ -42,3 +46,4 @@ Other disassembly projects:
 [irc]: https://kiwiirc.com/client/irc.freenode.net/?#pret
 [travis]: https://travis-ci.org/pret/pokecrystal
 [travis-badge]: https://travis-ci.org/pret/pokecrystal.svg?branch=master
+[reusable TM tutorial]: https://github.com/pret/pokecrystal/wiki/Infinitely-reusable-TMs
