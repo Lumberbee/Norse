@@ -2112,7 +2112,7 @@ wOtherDecoration::    db
 wCurEnemyItem:: db
 ENDU ; d1f7
 
-+wTilesetDataAddress:: dw
+wTilesetDataAddress:: dw
 
 wLinkBattleRNs:: ds 10 ; d1fa
 
