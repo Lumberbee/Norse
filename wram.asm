@@ -358,12 +358,6 @@ SECTION "Miscellaneous", WRAM0
 
 ; This union spans 480 bytes from c608 to c7e8.
 UNION ; c608
-; surrounding tiles
-; This buffer determines the size for the rest of the union;
-; it uses exactly 480 bytes.
-wSurroundingTiles:: ds SURROUNDING_WIDTH * SURROUNDING_HEIGHT
-
-NEXTU ; c608
 ; box save buffer
 ; SaveBoxAddress uses this buffer in three steps because it
 ; needs more space than the buffer can hold.
@@ -2060,9 +2054,9 @@ wTilesetBlocksBank:: db ; d1dc
 wTilesetBlocksAddress:: dw ; d1dd
 wTilesetCollisionBank:: db ; d1df
 wTilesetCollisionAddress:: dw ; d1e0
+wTilesetAttributesBank:: db
+wTilesetAttributesAddress:: dw
 wTilesetAnim:: dw ; bank 3f ; d1e2
-	ds 2 ; unused ; d1e4
-wTilesetPalettes:: dw ; bank 3f ; d1e6
 wTilesetEnd::
 
 wEvolvableFlags:: flag_array PARTY_LENGTH ; d1e8
@@ -2118,7 +2112,7 @@ wOtherDecoration::    db
 wCurEnemyItem:: db
 ENDU ; d1f7
 
-	ds 3
+wTilesetDataAddress:: dw
 
 wLinkBattleRNs:: ds 10 ; d1fa
 
@@ -2996,6 +2990,13 @@ w3_dd68:: ds SCREEN_WIDTH * SCREEN_HEIGHT
 
 w3_dfec:: ds $10
 w3_dffc:: ds 4
+
+
+SECTION "Surrounding Data", WRAMX
+
+wSurroundingTiles:: ds SURROUNDING_WIDTH * SURROUNDING_HEIGHT
+
+wSurroundingAttributes:: ds SURROUNDING_WIDTH * SURROUNDING_HEIGHT
 
 
 SECTION "GBC Video", WRAMX
