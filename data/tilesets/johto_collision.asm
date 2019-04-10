@@ -137,21 +137,21 @@
 	tilecoll TALL_GRASS, FLOOR, FLOOR, TALL_GRASS ; 88
 	tilecoll WALL, WALL, WALL, WALL ; 89
 	tilecoll WALL, WALL, WALL, WALL ; 8a
-	tilecoll WALL, WALL, WALL, WALL ; 8b
-	tilecoll WALL, WALL, WALL, WALL ; 8c
-	tilecoll WALL, WALL, WALL, WALL ; 8d
-	tilecoll WALL, WALL, WALL, WALL ; 8e
-	tilecoll WALL, WALL, WALL, WALL ; 8f
-	tilecoll WALL, WALL, WALL, WALL ; 90
-	tilecoll WALL, WALL, WALL, WALL ; 91
-	tilecoll WALL, WALL, WALL, WALL ; 92
-	tilecoll WALL, WALL, WALL, WALL ; 93
-	tilecoll WALL, WALL, WALL, WALL ; 94
-	tilecoll WALL, WALL, WALL, WALL ; 95
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 8b
+	tilecoll TALL_GRASS, TALL_GRASS, TALL_GRASS, TALL_GRASS ; 8c
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 8d
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 8e
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 8f
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 90
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 91
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 92
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 93
+	tilecoll WALL, FLOOR, FLOOR, FLOOR ; 94
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 95
 	tilecoll WALL, WALL, WALL, WALL ; 96
 	tilecoll WALL, WALL, WALL, WALL ; 97
 	tilecoll WALL, WALL, WALL, WALL ; 98
-	tilecoll WALL, WALL, WALL, WALL ; 99
+	tilecoll WALL, WALL, DOOR, WALL ; 99
 	tilecoll WALL, WALL, WALL, WALL ; 9a
 	tilecoll WALL, WALL, WALL, WALL ; 9b
 	tilecoll WALL, WALL, WALL, WALL ; 9c
