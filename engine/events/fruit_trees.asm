@@ -15,19 +15,38 @@ FruitTreeScript::
 .fruit
 	writetext HeyItsFruitText
 	copybytetovar wCurFruit
+	callasm GetFruitTreeCount
+	ifequal $1, .try_one
+	ifequal $2, .try_two
+	copybytetovar wCurFruit
+	giveitem ITEM_FROM_MEM, 3
+	iffalse .try_two
+	buttonsound
+	writetext ObtainedThreeFruitText
+	jump .continue
+.try_two
+	copybytetovar wCurFruit
+	giveitem ITEM_FROM_MEM, 2
+	iffalse .try_one
+	buttonsound
+	writetext ObtainedTwoFruitText
+	jump .continue
+.try_one
+	copybytetovar wCurFruit
 	giveitem ITEM_FROM_MEM
 	iffalse .packisfull
 	buttonsound
-	writetext ObtainedFruitText
+	writetext ObtainedOneFruitText
+.continue
 	callasm PickedFruitTree
 	specialsound
 	itemnotify
-	jump .end
+	closetext
+	end
 
 .packisfull
 	buttonsound
 	writetext FruitPackIsFullText
-	waitbutton
 
 .end
 	closetext
@@ -82,6 +101,13 @@ GetFruitTreeFlag:
 	pop hl
 	ret
 
+GetFruitTreeCount:
+	ld a, 3
+	call RandomRange
+	inc a
+	ld [wScriptVar], a
+	ret
+
 GetFruitTreeItem:
 	push hl
 	push de
@@ -104,8 +130,16 @@ HeyItsFruitText:
 	text_far _HeyItsFruitText
 	text_end
 
-ObtainedFruitText:
-	text_far _ObtainedFruitText
+ObtainedOneFruitText:
+	text_far _ObtainedOneFruitText
+	text_end
+
+ObtainedTwoFruitText:
+	text_far _ObtainedTwoFruitText
+	text_end
+
+ObtainedThreeFruitText:
+	text_far _ObtainedThreeFruitText
 	text_end
 
 FruitPackIsFullText:
